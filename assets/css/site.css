@@ -1134,3 +1134,56 @@ figure {
 .questions .q a:hover {
   color: var(--primary);
 }
+
+/* Hero: photograph with the app as an inset */
+
+.hero-visual {
+  position: relative;
+  margin-bottom: var(--s7);
+}
+
+.hero-photo-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: 70% 50%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero-visual figcaption {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: var(--s2);
+  text-align: right;
+}
+
+.device.inset {
+  position: absolute;
+  left: var(--s4);
+  bottom: calc(var(--s7) * -0.6);
+  width: 28%;
+  max-width: 150px;
+  margin: 0;
+  padding: 6px;
+  border-radius: 26px;
+}
+
+.device.inset::before {
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+}
+
+.device.inset .phone {
+  border-radius: 20px;
+}
+
+@media (max-width: 899px) {
+  .hero-visual {
+    order: -1;
+    margin-bottom: var(--s8);
+  }
+}
