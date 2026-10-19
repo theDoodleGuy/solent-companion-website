@@ -3,13 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Solent Companion: ships, MPZs and tide gates for the Solent</title>
+  <title>Solent Companion: Solent ships, MPZs and tide gates</title>
   <meta name="description" content="A free Android companion for Solent sailors: big ships and their Moving Prohibited Zones, tide gates and local notices. Advisory only.">
   <meta name="theme-color" content="#0B5CAD">
+  <link rel="canonical" href="https://solentcompanion.com/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Solent Companion">
-  <meta property="og:description" content="The local knowledge your chart app doesn't have: big ships and their MPZs, tide gates and local notices for the Solent.">
+  <meta property="og:site_name" content="Solent Companion">
+  <meta property="og:url" content="https://solentcompanion.com/">
+  <meta property="og:title" content="Solent Companion: the local knowledge your chart app doesn't have">
+  <meta property="og:description" content="Big ships and their MPZs, tide gates and local notices for the Solent. A free Android app. Advisory only.">
+  <meta property="og:image" content="https://solentcompanion.com/assets/img/og-solent-companion.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Solent Companion: the local knowledge your chart app doesn't have.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Solent Companion: the local knowledge your chart app doesn't have">
+  <meta name="twitter:description" content="Big ships and their MPZs, tide gates and local notices for the Solent. A free Android app. Advisory only.">
+  <meta name="twitter:image" content="https://solentcompanion.com/assets/img/og-solent-companion.png">
   <link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MobileApplication","name":"Solent Companion",
+   "operatingSystem":"Android","applicationCategory":"NavigationApplication",
+   "description":"A free Android companion for Solent sailors: big ships and their Moving Prohibited Zones, tide gates and local notices. Advisory only.",
+   "url":"https://solentcompanion.com/","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"}}
+  </script>
   <link rel="stylesheet" href="assets/css/site.css">
   <script>document.documentElement.classList.replace("no-js", "js")</script>
 </head>
@@ -49,8 +68,8 @@
           <p class="fine">Android only. Free, no account, no ads. An aid, not a navigator.</p>
         </div>
         <figure>
-          <img class="phone" src="assets/img/hero-map.svg" width="360" height="740"
-               alt="The app's map of the central Solent. A 290 metre ship has a red Moving Prohibited Zone box ahead of it, a fast ferry shows its speed line, a green tide gate marks Bramble Bank, and a purple dashed area marks a notice. A caption reads: Advisory only, keep a lookout and monitor VHF 12.">
+          <div class="device"><img class="phone" src="assets/img/hero-map.svg" width="360" height="740"
+               alt="The app's map of the central Solent. A 290 metre ship has a red Moving Prohibited Zone box ahead of it, a fast ferry shows its speed line, a green tide gate marks Bramble Bank, and a purple dashed area marks a notice. A caption reads: Advisory only, keep a lookout and monitor VHF 12."></div>
         </figure>
       </div>
     </section>
@@ -96,8 +115,8 @@
             </ul>
           </div>
           <figure class="feature-art">
-            <img src="assets/img/hero-map.svg" width="360" height="740" class="phone" style="max-width:240px" loading="lazy"
-                 alt="A ship's Moving Prohibited Zone drawn as a red box ahead of it, with a dashed outline around it for position uncertainty.">
+            <div class="device small"><img src="assets/img/hero-map.svg" width="360" height="740" class="phone" loading="lazy"
+                 alt="A ship's Moving Prohibited Zone drawn as a red box ahead of it, with a dashed outline around it for position uncertainty."></div>
             <figcaption>The MPZ box uses the published rules and the ship's reported AIS data.</figcaption>
           </figure>
         </article>
@@ -202,48 +221,75 @@
     <section id="join" class="band" aria-labelledby="join-title">
       <div class="wrap join">
         <div>
-          <span class="eyebrow">Closed test · spring 2027</span>
+          <span class="eyebrow">Closed test · sign up now</span>
           <h2 id="join-title">Help us test it on the water</h2>
-          <p>We're looking for 20 Solent sailors with an Android phone to use the app for a few weeks before it goes on Google Play. Owners, new skippers and charterers all welcome.</p>
+          <p class="status" id="test-status"><span class="dot" aria-hidden="true"></span> Closed test: open for sign-ups</p>
+          <p>We're looking for 20 Solent sailors with an Android phone to use the app before it goes on Google Play. Owners, new skippers and charterers all welcome. The sooner the test runs, the sooner everyone can have it.</p>
           <ol class="steps">
             <li>Fill in the form below with the Google account you use on your phone.</li>
-            <li>We add you to the test and send you a link to install it from Google Play.</li>
-            <li>Keep it installed for at least two weeks, use it when you sail, and tell us what helped and what got in the way.</li>
+            <li>We add you to the test and email you a link to install it from Google Play.</li>
+            <li>Keep it installed for two weeks, use it when you sail, and tell us what helped and what got in the way.</li>
           </ol>
-          <form class="join-form" action="https://solent-join.randomdoodle-pm.workers.dev/join" method="post">
+          <details class="explainer">
+            <summary>How does a Google Play closed test work?</summary>
+            <div><p>Google asks new apps to be tried by a small group before release. You give us the email of the Google account on your phone, we add it to the test list, and Google Play then shows you an install link. It installs like any other app and updates itself. It's free, and you can leave at any time.</p></div>
+          </details>
+          <form class="join-form" id="join-form" action="https://solent-join.randomdoodle-pm.workers.dev/join" method="post">
             <div class="field">
               <label for="f-email">Google account email on your phone <span class="req">(required)</span></label>
-              <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200">
-            </div>
-            <div class="field">
-              <label for="f-name">Your name</label>
-              <input id="f-name" name="name" type="text" autocomplete="name" maxlength="100">
+              <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" required maxlength="200">
+              <p class="field-error" id="f-email-error" role="alert" hidden></p>
             </div>
             <div class="field">
               <label for="f-phone">Phone model</label>
               <input id="f-phone" name="phone" type="text" maxlength="100" placeholder="e.g. Pixel 7, Galaxy A54">
             </div>
             <div class="field">
-              <label for="f-area">Where you usually sail</label>
-              <input id="f-area" name="area" type="text" maxlength="200" placeholder="e.g. Hamble to Cowes">
+              <label for="f-freq">How often do you sail the Solent?</label>
+              <select id="f-freq" name="frequency">
+                <option value="">Choose one</option>
+                <option>Most weekends</option>
+                <option>A few times a month</option>
+                <option>A few times a year</option>
+                <option>I'm just starting</option>
+              </select>
             </div>
-            <div class="field">
-              <label for="f-boat">Boat type and draft</label>
-              <input id="f-boat" name="boat" type="text" maxlength="200" placeholder="e.g. 32ft yacht, 1.8m draft">
-            </div>
-            <div class="field">
-              <label for="f-notes">Anything else? <span class="req">(optional)</span></label>
-              <textarea id="f-notes" name="notes" rows="3" maxlength="2000"></textarea>
-            </div>
+            <details class="more">
+              <summary>A bit more about you (optional)</summary>
+              <div class="more-fields">
+                <div class="field">
+                  <label for="f-name">Your name</label>
+                  <input id="f-name" name="name" type="text" autocomplete="name" maxlength="100">
+                </div>
+                <div class="field">
+                  <label for="f-area">Where you usually sail</label>
+                  <input id="f-area" name="area" type="text" maxlength="200" placeholder="e.g. Hamble to Cowes">
+                </div>
+                <div class="field">
+                  <label for="f-boat">Boat type and draft</label>
+                  <input id="f-boat" name="boat" type="text" maxlength="200" placeholder="e.g. 32ft yacht, 1.8m draft">
+                </div>
+                <div class="field">
+                  <label for="f-heard">How did you hear about this?</label>
+                  <input id="f-heard" name="heard" type="text" maxlength="200" placeholder="e.g. Hythe Sailing Club, a friend, Facebook">
+                </div>
+                <div class="field">
+                  <label for="f-notes">Anything else?</label>
+                  <textarea id="f-notes" name="notes" rows="3" maxlength="2000"></textarea>
+                </div>
+              </div>
+            </details>
+            <input type="hidden" name="src" id="f-src" value="">
             <div class="hp" aria-hidden="true">
               <label for="f-company">Leave this empty</label>
               <input id="f-company" name="company" type="text" tabindex="-1" autocomplete="off">
             </div>
             <div class="actions">
-              <button class="button" type="submit">Join the closed test</button>
+              <button class="button" type="submit" id="join-submit">Join the closed test</button>
             </div>
+            <p class="form-status" id="join-status" role="status" tabindex="-1" hidden></p>
           </form>
-          <p class="fine">We only use your email to add you to the test and to ask for feedback. <a href="privacy.html#testers">How we handle your details</a>.</p>
+          <p class="fine">Prefer email? Write to <a href="mailto:hello@solentcompanion.com">hello@solentcompanion.com</a>. We only use your details to add you to the test and to ask for feedback. <a href="privacy.html#testers">How we handle your details</a>.</p>
         </div>
         <div class="card">
           <h3>What you'll need</h3>
@@ -314,5 +360,9 @@
   </footer>
 
   <script src="assets/js/site.js" defer></script>
+  <div class="join-bar" id="join-bar" hidden>
+    <a class="button" href="#join">Join the closed test</a>
+  </div>
+  <script src="assets/js/join.js" defer></script>
 </body>
 </html>

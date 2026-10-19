@@ -21,7 +21,7 @@ python3 -m http.server 8000   # then open http://localhost:8000
 
 ## Before it goes live (owner)
 
-1. **Sign-up route.** Done: the form on the home page posts to the `solent-join` Cloudflare
+1. **Sign-up route** (done; the form's Worker must be redeployed after changes to `worker/join-form.js`). Done: the form on the home page posts to the `solent-join` Cloudflare
    Worker (code in `worker/join-form.js`), which emails each sign-up to the owner's Gmail and
    sends the visitor to `thanks.html`. hello@solentcompanion.com also forwards to the same Gmail.
 2. **Privacy page.** In `privacy.html`, fill in the date, contact email, backend domain and how

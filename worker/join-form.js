@@ -22,6 +22,23 @@ const page = (title, body, status = 200) =>
     { status, headers: { "content-type": "text/html; charset=utf-8" } }
   );
 
+// The page's script asks for JSON and shows the answer on the page. A plain form post
+// (no JavaScript) still gets the redirect to thanks.html or a simple error page.
+const wantsJson = (request) => (request.headers.get("Accept") || "").includes("application/json");
+
+const json = (request, body, status = 200) => {
+  const origin = request.headers.get("Origin");
+  const headers = { "content-type": "application/json" };
+  if (origin && ALLOWED_ORIGINS.includes(origin)) {
+    headers["Access-Control-Allow-Origin"] = origin;
+    headers["Vary"] = "Origin";
+  }
+  return new Response(JSON.stringify(body), { status, headers });
+};
+
+const done = (request) =>
+  wantsJson(request) ? json(request, { ok: true }) : Response.redirect(`${SITE}/thanks.html`, 303);
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -36,16 +53,20 @@ export default {
     const form = await request.formData();
 
     // Honeypot: real people never see or fill this field.
-    if (clean(form.get("company"))) return Response.redirect(`${SITE}/thanks.html`, 303);
+    if (clean(form.get("company"))) return done(request);
 
     const name = clean(form.get("name"), 100);
     const email = clean(form.get("email"), 200);
     const phone = clean(form.get("phone"), 100);
     const area = clean(form.get("area"), 200);
     const boat = clean(form.get("boat"), 200);
+    const frequency = clean(form.get("frequency"), 100);
+    const heard = clean(form.get("heard"), 200);
+    const src = clean(form.get("src"), 40);
     const notes = String(form.get("notes") ?? "").trim().slice(0, 2000);
 
     if (!/^[^\s@<>"]+@[^\s@<>"]+\.[^\s@<>"]+$/.test(email)) {
+      if (wantsJson(request)) return json(request, { ok: false, error: "email" }, 400);
       return page(
         "Please check your email address",
         "<p>We need the Google account email you use on your Android phone so we can add you to the test. Please go back and check it.</p>",
@@ -59,8 +80,12 @@ export default {
       `Name: ${name || "(not given)"}`,
       `Google account email: ${email}`,
       `Phone model: ${phone || "(not given)"}`,
+      `How often they sail the Solent: ${frequency || "(not given)"}`,
       `Where they sail: ${area || "(not given)"}`,
       `Boat type and draft: ${boat || "(not given)"}`,
+      "",
+      `How they heard: ${heard || "(not given)"}`,
+      `Link they came from (src): ${src || "(none)"}`,
       "",
       "Anything else:",
       notes || "(nothing)",
@@ -72,7 +97,7 @@ export default {
       `From: Solent Companion website <${FROM}>`,
       `To: ${TO}`,
       `Reply-To: ${email}`,
-      `Subject: Closed test sign-up: ${name || email}`,
+      `Subject: Closed test sign-up${src ? ` [${src}]` : ""}: ${name || email}`,
       `Message-ID: <${crypto.randomUUID()}@solentcompanion.com>`,
       `Date: ${new Date().toUTCString()}`,
       "MIME-Version: 1.0",
@@ -86,6 +111,7 @@ export default {
       await env.SEND.send(new EmailMessage(FROM, TO, raw));
     } catch (err) {
       console.error("send failed", err);
+      if (wantsJson(request)) return json(request, { ok: false, error: "send" }, 500);
       return page(
         "Sorry, that didn't send",
         "<p>Something went wrong on our side. Please try again in a few minutes, or email <a href=\"mailto:hello@solentcompanion.com\">hello@solentcompanion.com</a>.</p>",
@@ -93,6 +119,6 @@ export default {
       );
     }
 
-    return Response.redirect(`${SITE}/thanks.html`, 303);
+    return done(request);
   },
 };

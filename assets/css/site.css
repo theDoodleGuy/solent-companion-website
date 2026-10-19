@@ -887,3 +887,174 @@ figure {
     display: none;
   }
 }
+
+/* Join form additions */
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  font-weight: 600;
+  margin: 0 0 var(--s3);
+}
+
+.status .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ok);
+}
+
+.explainer,
+.more {
+  max-width: 34em;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-chip);
+  background: var(--surface);
+  padding: var(--s3) var(--s4);
+  margin-top: var(--s4);
+}
+
+.more {
+  margin-top: 0;
+}
+
+.explainer summary,
+.more summary {
+  cursor: pointer;
+  font-weight: 600;
+  min-height: 32px;
+}
+
+.more-fields {
+  display: grid;
+  gap: var(--s4);
+  margin-top: var(--s4);
+}
+
+.field select {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-chip);
+  padding: var(--s3);
+  min-height: 48px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.field select:focus {
+  outline: 3px solid var(--primary);
+  outline-offset: 1px;
+  border-color: var(--primary);
+}
+
+.field-error,
+.form-status.bad {
+  color: var(--alert);
+  font-weight: 600;
+  margin: 0;
+}
+
+.form-status {
+  margin: var(--s2) 0 0;
+  padding: var(--s3) var(--s4);
+  border-radius: var(--radius-chip);
+  max-width: 34em;
+}
+
+.form-status.good {
+  background: var(--surface-alt);
+  border-left: 4px solid var(--ok);
+}
+
+.form-status:focus {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.join-form .button:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+/* Sticky join bar, phones only */
+
+.join-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  padding: var(--s3) var(--s4) calc(var(--s3) + env(safe-area-inset-bottom));
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -4px 16px rgb(11 29 42 / 0.1);
+}
+
+.join-bar .button {
+  display: block;
+  text-align: center;
+  min-height: 48px;
+}
+
+.join-bar[hidden] {
+  display: none;
+}
+
+@media (min-width: 761px) {
+  .join-bar {
+    display: none !important;
+  }
+}
+
+/* Phone frame around the app screens */
+
+.device {
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 12px;
+  background: #11202b;
+  border-radius: 48px;
+  box-shadow: var(--shadow), inset 0 0 0 2px #2a3c49;
+  position: relative;
+}
+
+.device::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  border-radius: 50%;
+  background: #05090d;
+  z-index: 1;
+}
+
+.device .phone {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 36px;
+  box-shadow: none;
+}
+
+.device.small {
+  max-width: 250px;
+  padding: 9px;
+  border-radius: 38px;
+}
+
+.device.small::before {
+  top: 15px;
+  width: 9px;
+  height: 9px;
+  margin-left: -4px;
+}
+
+.device.small .phone {
+  border-radius: 29px;
+}
