@@ -1156,15 +1156,15 @@ figure {
   font-size: 13px;
   color: var(--text-muted);
   margin-top: var(--s2);
-  text-align: right;
+  max-width: 62%;
 }
 
 .device.inset {
   position: absolute;
-  left: var(--s4);
-  bottom: calc(var(--s7) * -0.6);
-  width: 28%;
-  max-width: 150px;
+  right: var(--s4);
+  bottom: calc(var(--s7) * -0.75);
+  width: 26%;
+  max-width: 130px;
   margin: 0;
   padding: 6px;
   border-radius: 26px;
