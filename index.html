@@ -83,15 +83,15 @@
         </div>
         <ul class="questions">
           <li style="--accent: var(--alert)">
-            <p class="q">Is that ship about to need the water I'm in?</p>
+            <p class="q"><a href="#ships">Is that ship about to need the water I'm in?</a></p>
             <p>In the Thorn Channel area, every ship over 150 m has a zone around it, 1,000 m ahead and 100 m either side, that small craft need to keep out of. It's called a Moving Prohibited Zone (MPZ). One coming up from astern is easy to miss.</p>
           </li>
           <li style="--accent: var(--notice)">
-            <p class="q">What has the harbour put out today?</p>
+            <p class="q"><a href="#notices">What has the harbour put out today?</a></p>
             <p>Harbour authorities each publish their own notices. Regattas, dredging and works change where you can go, often for just a few days.</p>
           </li>
           <li style="--accent: var(--ok)">
-            <p class="q">Will I float over Bramble Bank on this tide?</p>
+            <p class="q"><a href="#tide-gates">Will I float over Bramble Bank on this tide?</a></p>
             <p>Bramble Bank, Lepe Spit and Black Rock see groundings every season. The Day Skipper sum is easy at the chart table and harder in a seaway.</p>
           </li>
         </ul>
@@ -121,24 +121,7 @@
           <h2 id="features-title">Built for these waters, and only these waters</h2>
         </div>
 
-        <article class="feature">
-          <div>
-            <h3>Big ships, and the water they need</h3>
-            <p>See the large ships as they broadcast their positions (AIS), turned to their heading. In the Thorn Channel area, each ship over 150 m gets its MPZ drawn ahead of it, with a dashed outline because the reported position is never exact. Positions can be minutes old, and not every vessel shows up.</p>
-            <ul>
-              <li>Fast craft and ferries stand out, with a line showing where they'll be in a few minutes.</li>
-              <li>Tap a ship for its name, length, speed and how old its position is.</li>
-              <li>Old positions turn grey and say how many minutes old they are.</li>
-            </ul>
-          </div>
-          <figure class="feature-art">
-            <div class="device small"><img src="assets/img/hero-map.svg" width="360" height="740" class="phone" loading="lazy"
-                 alt="A ship's Moving Prohibited Zone drawn as a red box ahead of it, with a dashed outline around it for position uncertainty."></div>
-            <figcaption>The MPZ box uses the published rules and the ship's reported AIS data.</figcaption>
-          </figure>
-        </article>
-
-        <article class="feature flip">
+        <article class="feature" id="tide-gates">
           <div>
             <h3>Will you float over it?</h3>
             <p>Ten of the Solent's shallow spots, from Bramble Bank and Lepe Spit to Chichester Bar and Hurst Narrows. Put in your draft and the charted depth from your own chart, and the app shows the sum with the predicted height of tide. Tide figures are predictions, so it's a check on your own working, not a replacement for it.</p>
@@ -169,7 +152,24 @@
           </figure>
         </article>
 
-        <article class="feature">
+        <article class="feature flip" id="ships">
+          <div>
+            <h3>Big ships, and the water they need</h3>
+            <p>See the large ships as they broadcast their positions (AIS), turned to their heading. In the Thorn Channel area, each ship over 150 m gets its MPZ drawn ahead of it, with a dashed outline because the reported position is never exact. Positions can be minutes old, and not every vessel shows up.</p>
+            <ul>
+              <li>Fast craft and ferries stand out, with a line showing where they'll be in a few minutes.</li>
+              <li>Tap a ship for its name, length, speed and how old its position is.</li>
+              <li>Old positions turn grey and say how many minutes old they are.</li>
+            </ul>
+          </div>
+          <figure class="feature-art">
+            <div class="device small"><img src="assets/img/hero-map.svg" width="360" height="740" class="phone" loading="lazy"
+                 alt="A ship's Moving Prohibited Zone drawn as a red box ahead of it, with a dashed outline around it for position uncertainty."></div>
+            <figcaption>The MPZ box uses the published rules and the ship's reported AIS data.</figcaption>
+          </figure>
+        </article>
+
+        <article class="feature" id="notices">
           <div>
             <h3>What's on the water today</h3>
             <p>Regatta, dredging, works: notices from the Solent's harbour authorities, in one list and as shaded areas on the map. Each one says when it applies and links to the authority's full notice.</p>
@@ -185,7 +185,7 @@
           </figure>
         </article>
 
-        <article class="feature flip">
+        <article class="feature flip" id="underway">
           <div>
             <h3>Phone in your pocket</h3>
             <p>Switch on Underway when you cast off. With the screen off, it can give you an advisory alert when:</p>

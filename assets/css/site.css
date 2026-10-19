@@ -44,19 +44,19 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --surface: #0b1d2a;
-    --surface-alt: #102735;
-    --text: #e6eef3;
-    --text-muted: #a9bbc7;
+    --surface: #14191c;
+    --surface-alt: #1d2428;
+    --text: #efe8da;
+    --text-muted: #bdb8aa;
     --primary: #6cb2f5;
     --primary-hover: #91c6f8;
     --on-primary: #0b1d2a;
     --alert: #ff6b60;
     --caution: #f2a541;
     --ok: #4cc79b;
-    --stale: #93a1ab;
+    --stale: #9aa39f;
     --notice: #b79cf0;
-    --line: #23404f;
+    --line: #38413f;
     --brass: #d9b45f;
     --teak: #d98b55;
     --sea: #12364d;
@@ -602,7 +602,7 @@ figure {
 /* What it isn't */
 
 .aid {
-  border-left: 6px solid var(--alert);
+  border-left: 6px solid var(--brass);
   background: var(--surface);
   border-radius: 0 var(--radius) var(--radius) 0;
   padding: var(--s6);
@@ -1123,4 +1123,14 @@ figure {
 .maker-photo img {
   width: 100%;
   height: auto;
+}
+
+.questions .q a {
+  color: inherit;
+  text-decoration-color: var(--brass);
+  text-decoration-thickness: 2px;
+}
+
+.questions .q a:hover {
+  color: var(--primary);
 }
