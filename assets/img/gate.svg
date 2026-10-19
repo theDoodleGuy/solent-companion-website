@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="Roboto Flex, Roboto, system-ui, sans-serif">
+  <!-- Drawn to scale, 40 px to the metre: 1.8 + 2.1 - 1.6 = 2.3 m -->
+  <rect width="480" height="300" rx="16" fill="#DCEBF5"/>
+  <path d="M0 108 Q20 100 40 108 T80 108 T120 108 T160 108 T200 108 T240 108 T280 108 T320 108 T360 108 T400 108 T440 108 T480 108 V300 H0 Z" fill="#B9D6EA"/>
+  <line x1="0" y1="180" x2="480" y2="180" stroke="#3D5566" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="400" y="174" font-size="13" fill="#3D5566">Chart datum</text>
+  <path d="M0 264 C80 260 160 268 240 264 C320 260 400 268 480 262 V300 H0 Z" fill="#C9B98F"/>
+  <path d="M190 88 H310 L296 110 L262 110 L262 172 L246 172 L246 110 L204 110 Z" fill="#0B1D2A"/>
+  <line x1="254" y1="24" x2="254" y2="88" stroke="#0B1D2A" stroke-width="3"/>
+  <path d="M256 28 L256 84 L298 84 Z" fill="#fff" stroke="#0B1D2A" stroke-width="1.5"/>
+  <g stroke-width="3" stroke-linecap="round">
+    <line x1="140" y1="112" x2="140" y2="178" stroke="#0B5CAD"/>
+    <line x1="140" y1="182" x2="140" y2="262" stroke="#3D5566"/>
+    <line x1="340" y1="174" x2="340" y2="262" stroke="#0F6E4E"/>
+  </g>
+  <g font-size="14" font-weight="600">
+    <text x="20" y="140" fill="#0B5CAD">Height of tide</text>
+    <text x="20" y="158" fill="#0B5CAD">1.8 m</text>
+    <text x="20" y="218" fill="#3D5566">Charted depth</text>
+    <text x="20" y="236" fill="#3D5566">2.1 m</text>
+    <text x="352" y="214" fill="#0F6E4E">Clearance</text>
+    <text x="352" y="232" fill="#0F6E4E">2.3 m</text>
+    <text x="272" y="140" fill="#0B1D2A">Draft 1.6 m</text>
+  </g>
+</svg>

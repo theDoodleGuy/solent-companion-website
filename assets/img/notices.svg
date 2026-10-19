@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="Roboto Flex, Roboto, system-ui, sans-serif">
+  <rect width="480" height="300" rx="16" fill="#DCEBF5"/>
+  <path d="M0 0 H480 V70 C420 84 380 60 330 80 C280 100 240 74 190 92 C140 110 90 84 0 104 Z" fill="#EEF0E6"/>
+  <path d="M0 250 C70 236 130 252 200 238 C270 224 330 244 400 230 C440 222 470 228 480 226 V300 H0 Z" fill="#EEF0E6"/>
+  <path d="M120 128 L286 112 L300 196 L132 214 Z" fill="#6A3FB0" fill-opacity="0.18" stroke="#6A3FB0" stroke-width="2.5" stroke-dasharray="8 5"/>
+  <rect x="196" y="146" width="40" height="36" rx="5" fill="#fff" stroke="#6A3FB0" stroke-width="2.5"/>
+  <rect x="196" y="146" width="40" height="11" fill="#6A3FB0"/>
+  <text x="216" y="177" text-anchor="middle" font-size="15" font-weight="700" fill="#6A3FB0">9</text>
+  <!-- Notice sheet -->
+  <rect x="236" y="196" width="226" height="88" rx="14" fill="#fff" stroke="#D3DEE6"/>
+  <text x="252" y="222" font-size="14" font-weight="700" fill="#0B1D2A">Racing: central Solent</text>
+  <text x="252" y="242" font-size="12.5" fill="#3D5566">In force 9 to 16 Aug</text>
+  <text x="252" y="268" font-size="12.5" font-weight="600" fill="#0B5CAD">Read the full notice</text>
+</svg>
