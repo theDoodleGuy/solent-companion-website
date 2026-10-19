@@ -45,11 +45,11 @@
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
         <div class="nav-links" id="nav-links">
           <a href="#features">What it does</a>
-          <a href="#aid">What it isn't</a>
+          <a href="#aid">The limits</a>
           <a href="#faq">Questions</a>
           <a href="privacy.html">Privacy</a>
         </div>
-        <a class="button small" href="#join">Join the test</a>
+        <a class="button small" href="#join">Help test it</a>
       </nav>
     </div>
   </header>
@@ -60,12 +60,13 @@
         <div>
           <span class="eyebrow">For sailing the Solent · Android</span>
           <h1>The local knowledge your chart app doesn't have.</h1>
-          <p class="lede">Big ships and their Moving Prohibited Zones, tide gates and local notices for the Solent, in one free Android app that sits alongside the chart app you already use.</p>
+          <p class="lede">Built by a Solent sailor, for the Solent: the big ships and the water they need, the tide over the shallow bits, and what the harbour has put out today. One free Android app that sits alongside your chart app.</p>
           <div class="actions">
-            <a class="button" href="#join">Join the closed test</a>
+            <a class="button" href="#join">Help test it</a>
             <a class="button secondary" href="#features">See what it does</a>
           </div>
           <p class="fine">Android only. Free, no account, no ads. An aid, not a navigator.</p>
+          <p class="audience">For owners who know the Solent, Day Skipper and Coastal Skipper students, and charterers who don't.</p>
         </div>
         <figure>
           <div class="device"><img class="phone" src="assets/img/hero-map.svg" width="360" height="740"
@@ -82,18 +83,38 @@
         </div>
         <ul class="questions">
           <li style="--accent: var(--alert)">
-            <p class="q">Is a big ship about to put me inside its MPZ?</p>
-            <p>In the Thorn Channel precautionary area, a ship over 150 m carries a Moving Prohibited Zone 1,000 m ahead and 100 m either side. One coming up from astern is easy to miss.</p>
+            <p class="q">Is that ship about to need the water I'm in?</p>
+            <p>In the Thorn Channel area, every ship over 150 m has a zone around it, 1,000 m ahead and 100 m either side, that small craft need to keep out of. It's called a Moving Prohibited Zone (MPZ). One coming up from astern is easy to miss.</p>
           </li>
           <li style="--accent: var(--notice)">
-            <p class="q">What restrictions are in force today?</p>
+            <p class="q">What has the harbour put out today?</p>
             <p>Harbour authorities each publish their own notices. Regattas, dredging and works change where you can go, often for just a few days.</p>
           </li>
           <li style="--accent: var(--ok)">
-            <p class="q">How much water will I have when I get there?</p>
+            <p class="q">Will I float over Bramble Bank on this tide?</p>
             <p>Bramble Bank, Lepe Spit and Black Rock see groundings every season. The Day Skipper sum is easy at the chart table and harder in a seaway.</p>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section class="maker" aria-labelledby="maker-title">
+      <!-- OWNER-PLACEHOLDER: replace the photo and the [bracketed] words below, then delete this
+           comment. The deploy refuses to publish while the token above is still in this file. -->
+      <div class="wrap maker-grid">
+        <figure class="maker-photo">
+          <svg viewBox="0 0 240 300" role="img" aria-label="Photo of the builder to come">
+            <rect width="240" height="300" fill="currentColor" opacity=".08"/>
+            <circle cx="120" cy="108" r="42" fill="currentColor" opacity=".22"/>
+            <path d="M40 300c0-62 36-98 80-98s80 36 80 98z" fill="currentColor" opacity=".22"/>
+          </svg>
+        </figure>
+        <div>
+          <span class="eyebrow">Who made this</span>
+          <h2 id="maker-title">Hello, I'm [your name]</h2>
+          <p>I sail from Hythe on the Solent, [on a boat type and length]. I built Solent Companion because [your reason in a sentence or two, for example: the things I wanted to check before leaving the marina were spread across too many apps and websites].</p>
+          <p>It's one person's project, tested by Solent sailors. If something's wrong or missing, tell me and I'll read it myself: <a href="mailto:hello@solentcompanion.com">hello@solentcompanion.com</a>.</p>
+        </div>
       </div>
     </section>
 
@@ -106,8 +127,8 @@
 
         <article class="feature">
           <div>
-            <h3>Big ships, with the zone you need to keep out of</h3>
-            <p>Large ships show live from AIS, turned to their heading. In the precautionary area, each ship over 150 m gets its Moving Prohibited Zone drawn ahead of it, with a dashed outline for the uncertainty in its reported position.</p>
+            <h3>Big ships, and the water they need</h3>
+            <p>See the large ships as they broadcast their positions (AIS), turned to their heading. In the Thorn Channel area, each ship over 150 m gets its MPZ drawn ahead of it, with a dashed outline because the reported position is never exact. Positions can be minutes old, and not every vessel shows up.</p>
             <ul>
               <li>Fast craft and ferries stand out, with a line showing where they'll be in a few minutes.</li>
               <li>Tap a ship for its name, length, speed and how old its position is.</li>
@@ -123,8 +144,8 @@
 
         <article class="feature flip">
           <div>
-            <h3>Tide gates that show the working</h3>
-            <p>Ten of the Solent's known shallow spots, from Bramble Bank and Lepe Spit to Chichester Bar and Hurst Narrows. Enter your draft and the charted depth from your own chart, and the app does the sum with the predicted height of tide.</p>
+            <h3>Will you float over it?</h3>
+            <p>Ten of the Solent's shallow spots, from Bramble Bank and Lepe Spit to Chichester Bar and Hurst Narrows. Put in your draft and the charted depth from your own chart, and the app shows the sum with the predicted height of tide. Tide figures are predictions, so it's a check on your own working, not a replacement for it.</p>
             <ul>
               <li>Clearance now or at the time you choose, and when it's above your margin over the next 24 hours.</li>
               <li>Every answer opens up to show the working, line by line.</li>
@@ -154,8 +175,8 @@
 
         <article class="feature">
           <div>
-            <h3>Local notices, on the map while they're in force</h3>
-            <p>Notices to mariners and events on the water from the Solent's harbour authorities, in one list and as shaded areas on the map. Each one says when it applies and links to the authority's full notice.</p>
+            <h3>What's on the water today</h3>
+            <p>Regatta, dredging, works: notices from the Solent's harbour authorities, in one list and as shaded areas on the map. Each one says when it applies and links to the authority's full notice.</p>
             <ul>
               <li>Areas only show while they're in force, so the map doesn't fill with old ones.</li>
               <li>Short plain-English summaries; the authority's own notice always applies.</li>
@@ -170,14 +191,14 @@
 
         <article class="feature flip">
           <div>
-            <h3>Underway: advisory alerts with your phone in your pocket</h3>
-            <p>Turn on Underway as you leave and the app keeps watch with the screen off. It gives an advisory alert when:</p>
+            <h3>Phone in your pocket</h3>
+            <p>Switch on Underway when you cast off. With the screen off, it can give you an advisory alert when:</p>
             <ul>
               <li>your track crosses a big ship's MPZ, or you're already inside one;</li>
               <li>a fast craft is closing on you;</li>
               <li>a tide gate near you is below your margin, once you've added its charted depth from your chart.</li>
             </ul>
-            <p class="muted">It stops by itself after 12 hours, and it tells you plainly when it can't alert you, for example with no GPS fix or notifications turned off.</p>
+            <p class="muted">Alerts can be late, missed or wrong, so keep your lookout and VHF 12. It stops by itself after 12 hours, and tells you plainly when it can't alert you, for example with no GPS fix or notifications turned off.</p>
           </div>
           <figure class="feature-art">
             <img src="assets/img/alert.svg" width="480" height="300" loading="lazy"
@@ -191,8 +212,8 @@
       <div class="wrap pair">
         <div class="panel night">
           <img class="icon" src="assets/img/night.svg" alt="" width="40" height="40">
-          <h3>Night mode that keeps your night vision</h3>
-          <p>Night mode dims the screen and turns the controls red, so the display doesn't spoil your night vision. A higher-contrast option is there when you need to read the small print.</p>
+          <h3>Easy on your night eyes</h3>
+          <p>Red on black, so the screen doesn't spoil your night vision on the late tide. A higher-contrast option is there when you need to read the small print.</p>
         </div>
         <div class="panel">
           <img class="icon" src="assets/img/lock.svg" alt="" width="40" height="40">
@@ -205,8 +226,8 @@
     <section id="aid" aria-labelledby="aid-title">
       <div class="wrap">
         <div class="aid">
-          <h2 id="aid-title">An aid, not a navigator</h2>
-          <p>We'd rather you knew the limits before you download it.</p>
+          <h2 id="aid-title">The limits: an aid, not a navigator</h2>
+          <p>What it will and won't do. We'd rather you knew before you download it.</p>
           <ul>
             <li><strong>Ship positions can be minutes old.</strong> AIS can be delayed or incomplete, and not every vessel transmits.</li>
             <li><strong>Tide figures are predictions.</strong> Weather, pressure and surge change the actual height.</li>
@@ -221,17 +242,17 @@
     <section id="join" class="band" aria-labelledby="join-title">
       <div class="wrap join">
         <div>
-          <span class="eyebrow">Closed test · sign up now</span>
+          <span class="eyebrow">Crew wanted</span>
           <h2 id="join-title">Help us test it on the water</h2>
-          <p class="status" id="test-status"><span class="dot" aria-hidden="true"></span> Closed test: open for sign-ups</p>
-          <p>We're looking for 20 Solent sailors with an Android phone to use the app before it goes on Google Play. Owners, new skippers and charterers all welcome. The sooner the test runs, the sooner everyone can have it.</p>
+          <p class="status" id="test-status"><span class="dot" aria-hidden="true"></span> Places open</p>
+          <p>Google runs a two-week test before an app goes public, so we need about 20 Solent sailors with an Android phone to keep it installed for 14 days and tell us what's wrong. Owners, new skippers and charterers all welcome. The sooner the test runs, the sooner everyone can have it.</p>
           <ol class="steps">
-            <li>Fill in the form below with the Google account you use on your phone.</li>
-            <li>We add you to the test and email you a link to install it from Google Play.</li>
-            <li>Keep it installed for two weeks, use it when you sail, and tell us what helped and what got in the way.</li>
+            <li>Tell us the Google email on your phone.</li>
+            <li>We send you a link to install it from Google Play.</li>
+            <li>Use it on a few trips over two weeks, then tell us what helped and what got in the way.</li>
           </ol>
           <details class="explainer">
-            <summary>How does a Google Play closed test work?</summary>
+            <summary>What does "Google test" mean for me?</summary>
             <div><p>Google asks new apps to be tried by a small group before release. You give us the email of the Google account on your phone, we add it to the test list, and Google Play then shows you an install link. It installs like any other app and updates itself. It's free, and you can leave at any time.</p></div>
           </details>
           <form class="join-form" id="join-form" action="https://solent-join.randomdoodle-pm.workers.dev/join" method="post">
@@ -241,37 +262,37 @@
               <p class="field-error" id="f-email-error" role="alert" hidden></p>
             </div>
             <div class="field">
-              <label for="f-phone">Phone model</label>
-              <input id="f-phone" name="phone" type="text" maxlength="100" placeholder="e.g. Pixel 7, Galaxy A54">
+              <label for="f-area">Where do you sail from? <span class="req">(optional)</span></label>
+              <input id="f-area" name="area" type="text" maxlength="200" placeholder="e.g. Hythe, Hamble, Cowes">
             </div>
             <div class="field">
-              <label for="f-freq">How often do you sail the Solent?</label>
-              <select id="f-freq" name="frequency">
-                <option value="">Choose one</option>
-                <option>Most weekends</option>
-                <option>A few times a month</option>
-                <option>A few times a year</option>
-                <option>I'm just starting</option>
-              </select>
+              <label for="f-heard">How did you hear about this? <span class="req">(optional)</span></label>
+              <input id="f-heard" name="heard" type="text" maxlength="200" placeholder="e.g. Hythe Sailing Club, a friend, Facebook">
             </div>
             <details class="more">
               <summary>A bit more about you (optional)</summary>
               <div class="more-fields">
                 <div class="field">
+                  <label for="f-phone">Phone model</label>
+                  <input id="f-phone" name="phone" type="text" maxlength="100" placeholder="e.g. Pixel 7, Galaxy A54">
+                </div>
+                <div class="field">
+                  <label for="f-freq">How often do you sail the Solent?</label>
+                  <select id="f-freq" name="frequency">
+                    <option value="">Choose one</option>
+                    <option>Most weekends</option>
+                    <option>A few times a month</option>
+                    <option>A few times a year</option>
+                    <option>I'm just starting</option>
+                  </select>
+                </div>
+                <div class="field">
                   <label for="f-name">Your name</label>
                   <input id="f-name" name="name" type="text" autocomplete="name" maxlength="100">
                 </div>
                 <div class="field">
-                  <label for="f-area">Where you usually sail</label>
-                  <input id="f-area" name="area" type="text" maxlength="200" placeholder="e.g. Hamble to Cowes">
-                </div>
-                <div class="field">
                   <label for="f-boat">Boat type and draft</label>
                   <input id="f-boat" name="boat" type="text" maxlength="200" placeholder="e.g. 32ft yacht, 1.8m draft">
-                </div>
-                <div class="field">
-                  <label for="f-heard">How did you hear about this?</label>
-                  <input id="f-heard" name="heard" type="text" maxlength="200" placeholder="e.g. Hythe Sailing Club, a friend, Facebook">
                 </div>
                 <div class="field">
                   <label for="f-notes">Anything else?</label>
@@ -285,7 +306,7 @@
               <input id="f-company" name="company" type="text" tabindex="-1" autocomplete="off">
             </div>
             <div class="actions">
-              <button class="button" type="submit" id="join-submit">Join the closed test</button>
+              <button class="button" type="submit" id="join-submit">Count me in</button>
             </div>
             <p class="form-status" id="join-status" role="status" tabindex="-1" hidden></p>
           </form>
@@ -318,19 +339,19 @@
           </details>
           <details>
             <summary>How much does it cost?</summary>
-            <div><p>It's free to test, with no account and no ads.</p></div>
+            <div><p>It's free, with no account and no ads.</p></div>
           </details>
           <details>
-            <summary>Do I still need my chart app?</summary>
+            <summary>Does it replace my chart app?</summary>
             <div><p>Yes. Solent Companion isn't a chart plotter and doesn't plan routes. It sits alongside savvy navvy, Navionics, a plotter or paper charts, and adds the local layer they don't carry.</p></div>
           </details>
           <details>
-            <summary>Does it work without a phone signal?</summary>
+            <summary>Will it work without signal?</summary>
             <div><p>Partly. The app keeps the latest tides and notices on your phone, and shows the last ship positions it had, with how old they are. Ships aren't live without a connection, and the app says so.</p></div>
           </details>
           <details>
             <summary>Where does the data come from?</summary>
-            <div><p>Ship positions from AIS, tide predictions from the UK Hydrographic Office, seamarks from OpenSeaMap, and notices from the Solent's harbour authorities. Tide gate clearance uses the charted depth you take from your own chart.</p></div>
+            <div><p>Ship positions broadcast by the ships themselves (AIS), tide predictions from the UK Hydrographic Office, seamarks from OpenSeaMap, and notices from the Solent's harbour authorities. Tide gate clearance uses the charted depth you take from your own chart.</p></div>
           </details>
           <details>
             <summary>What does it do with my location?</summary>
@@ -354,14 +375,14 @@
       <ul>
         <li><a href="privacy.html">Privacy policy</a></li>
         <li><a href="privacy.html#disclaimer">Disclaimer</a></li>
-        <li><a href="#join">Join the test</a></li>
+        <li><a href="#join">Help test it</a></li>
       </ul>
     </div>
   </footer>
 
   <script src="assets/js/site.js" defer></script>
   <div class="join-bar" id="join-bar" hidden>
-    <a class="button" href="#join">Join the closed test</a>
+    <a class="button" href="#join">Help test it</a>
   </div>
   <script src="assets/js/join.js" defer></script>
 </body>

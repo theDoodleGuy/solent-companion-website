@@ -23,6 +23,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       # Publish only the site, not the design notes.
+      - name: Refuse to publish unfinished placeholders
+        run: |
+          if grep -rn "OWNER-PLACEHOLDER" index.html privacy.html thanks.html; then
+            echo "Placeholders still in the page: finish them first (search for OWNER-PLACEHOLDER)."; exit 1
+          fi
       - name: Collect the site files
         run: |
           mkdir _site

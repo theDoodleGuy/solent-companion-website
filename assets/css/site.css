@@ -1,10 +1,10 @@
 /* Solent Companion website. Tokens follow the app's design system (design/website-design.md, section 4). */
 
 :root {
-  --surface: #ffffff;
-  --surface-alt: #f2f6f9;
-  --text: #0b1d2a;
-  --text-muted: #3d5566;
+  --surface: #f6f1e7;
+  --surface-alt: #ebe3d2;
+  --text: #14232e;
+  --text-muted: #44505a;
   --primary: #0b5cad;
   --primary-hover: #094c8f;
   --on-primary: #ffffff;
@@ -13,7 +13,10 @@
   --ok: #0f6e4e;
   --stale: #6b7780;
   --notice: #6a3fb0;
-  --line: #d3dee6;
+  --line: #d8cdb6;
+  --brass: #7a5a12;
+  --teak: #8a4b1f;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Charter, Georgia, serif;
   --sea: #dcebf5;
   --land: #eef0e6;
   --night-bg: #000000;
@@ -54,6 +57,8 @@
     --stale: #93a1ab;
     --notice: #b79cf0;
     --line: #23404f;
+    --brass: #d9b45f;
+    --teak: #d98b55;
     --sea: #12364d;
     --land: #1d2a24;
     --shadow: 0 12px 32px rgb(0 0 0 / 0.4);
@@ -112,6 +117,7 @@ a:hover {
 h1,
 h2,
 h3 {
+  font-family: var(--font-serif);
   line-height: 1.15;
   margin: 0 0 var(--s4);
   letter-spacing: -0.01em;
@@ -923,7 +929,9 @@ figure {
 .more summary {
   cursor: pointer;
   font-weight: 600;
-  min-height: 32px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
 }
 
 .more-fields {
@@ -1057,4 +1065,62 @@ figure {
 
 .device.small .phone {
   border-radius: 29px;
+}
+
+/* Warmer, sailor-facing touches */
+
+.eyebrow {
+  color: var(--brass);
+}
+
+.questions .q {
+  font-family: var(--font-serif);
+}
+
+.audience {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--text-muted);
+  margin: var(--s2) 0 0;
+}
+
+/* Who made this */
+
+.maker {
+  background: var(--surface);
+  padding: var(--s8) 0;
+}
+
+.maker-grid {
+  display: grid;
+  gap: var(--s6);
+  align-items: center;
+}
+
+.maker-photo {
+  max-width: 220px;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+  color: var(--text);
+  border: 1px solid var(--line);
+  background: var(--surface-alt);
+}
+
+.maker-photo img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 800px) {
+  .maker-grid {
+    grid-template-columns: 240px 1fr;
+    gap: var(--s7);
+  }
+}
+
+.maker-photo svg,
+.maker-photo img {
+  width: 100%;
+  height: auto;
 }
