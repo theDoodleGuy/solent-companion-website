@@ -1017,54 +1017,24 @@ figure {
   }
 }
 
-/* Phone frame around the app screens */
+/* The app screenshots already include their own phone body, so no extra frame here. */
 
 .device {
   max-width: 340px;
   margin: 0 auto;
-  padding: 12px;
-  background: #11202b;
-  border-radius: 48px;
-  box-shadow: var(--shadow), inset 0 0 0 2px #2a3c49;
-  position: relative;
-}
-
-.device::before {
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  width: 12px;
-  height: 12px;
-  margin-left: -6px;
-  border-radius: 50%;
-  background: #05090d;
-  z-index: 1;
+  filter: drop-shadow(0 12px 24px rgb(11 29 42 / 0.25));
 }
 
 .device .phone {
   display: block;
   max-width: 100%;
   height: auto;
-  border-radius: 36px;
+  border-radius: 0;
   box-shadow: none;
 }
 
 .device.small {
   max-width: 250px;
-  padding: 9px;
-  border-radius: 38px;
-}
-
-.device.small::before {
-  top: 15px;
-  width: 9px;
-  height: 9px;
-  margin-left: -4px;
-}
-
-.device.small .phone {
-  border-radius: 29px;
 }
 
 /* Warmer, sailor-facing touches */
@@ -1166,19 +1136,6 @@ figure {
   width: 26%;
   max-width: 130px;
   margin: 0;
-  padding: 6px;
-  border-radius: 26px;
-}
-
-.device.inset::before {
-  top: 10px;
-  width: 6px;
-  height: 6px;
-  margin-left: -3px;
-}
-
-.device.inset .phone {
-  border-radius: 20px;
 }
 
 @media (max-width: 899px) {
