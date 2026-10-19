@@ -673,6 +673,67 @@ figure {
   margin: 0 0 var(--s4);
 }
 
+/* Join form */
+
+.join-form {
+  display: grid;
+  gap: var(--s4);
+  margin: var(--s5) 0 0;
+  max-width: 34em;
+}
+
+.field {
+  display: grid;
+  gap: var(--s1);
+}
+
+.field label {
+  font-weight: 600;
+}
+
+.field .req {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.field input,
+.field textarea {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-chip);
+  padding: var(--s3);
+  min-height: 48px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--stale);
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: 3px solid var(--primary);
+  outline-offset: 1px;
+  border-color: var(--primary);
+}
+
+.join-form .actions {
+  margin: var(--s2) 0 0;
+}
+
+/* Honeypot field: hidden from people, left for spam bots to fill in. */
+.hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* FAQ */
 
 .faq {

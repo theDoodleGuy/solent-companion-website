@@ -206,14 +206,44 @@
           <h2 id="join-title">Help us test it on the water</h2>
           <p>We're looking for 20 Solent sailors with an Android phone to use the app for a few weeks before it goes on Google Play. Owners, new skippers and charterers all welcome.</p>
           <ol class="steps">
-            <li>Email us with the Google account you use on your phone. The button below writes the email for you.</li>
+            <li>Fill in the form below with the Google account you use on your phone.</li>
             <li>We add you to the test and send you a link to install it from Google Play.</li>
             <li>Keep it installed for at least two weeks, use it when you sail, and tell us what helped and what got in the way.</li>
           </ol>
-          <div class="actions">
-            <a class="button" href="mailto:hello@solentcompanion.com?subject=Solent%20Companion%20closed%20test&amp;body=Google%20account%20email%20on%20my%20phone%3A%20%0APhone%20model%3A%20%0AWhere%20I%20usually%20sail%3A%20%0ABoat%20type%20and%20draft%3A%20%0A">Join the closed test</a>
-          </div>
-          <p class="fine">We only use your email to add you to the test and to ask for feedback. <a href="privacy.html#testers">How we handle tester emails</a>.</p>
+          <form class="join-form" action="https://solent-join.randomdoodle-pm.workers.dev/join" method="post">
+            <div class="field">
+              <label for="f-email">Google account email on your phone <span class="req">(required)</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200">
+            </div>
+            <div class="field">
+              <label for="f-name">Your name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" maxlength="100">
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone model</label>
+              <input id="f-phone" name="phone" type="text" maxlength="100" placeholder="e.g. Pixel 7, Galaxy A54">
+            </div>
+            <div class="field">
+              <label for="f-area">Where you usually sail</label>
+              <input id="f-area" name="area" type="text" maxlength="200" placeholder="e.g. Hamble to Cowes">
+            </div>
+            <div class="field">
+              <label for="f-boat">Boat type and draft</label>
+              <input id="f-boat" name="boat" type="text" maxlength="200" placeholder="e.g. 32ft yacht, 1.8m draft">
+            </div>
+            <div class="field">
+              <label for="f-notes">Anything else? <span class="req">(optional)</span></label>
+              <textarea id="f-notes" name="notes" rows="3" maxlength="2000"></textarea>
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="f-company">Leave this empty</label>
+              <input id="f-company" name="company" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="actions">
+              <button class="button" type="submit">Join the closed test</button>
+            </div>
+          </form>
+          <p class="fine">We only use your email to add you to the test and to ask for feedback. <a href="privacy.html#testers">How we handle your details</a>.</p>
         </div>
         <div class="card">
           <h3>What you'll need</h3>
