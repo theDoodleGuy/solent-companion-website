@@ -21,8 +21,8 @@ python3 -m http.server 8000   # then open http://localhost:8000
 
 ## Before it goes live (owner)
 
-1. **Sign-up route.** In `index.html`, search for `OWNER` and replace `OWNER-EMAIL@example.com`
-   with the address testers should write to, or swap the whole link for a Google Form.
+1. **Sign-up route.** Done: "Join the closed test" emails hello@solentcompanion.com, which
+   Cloudflare Email Routing forwards to the owner's Gmail. Swap for a Google Form if preferred.
 2. **Privacy page.** In `privacy.html`, fill in the date, contact email, backend domain and how
    long server logs are kept (search for `[`). Have it reviewed; the wording started from
    `documents/privacy-policy-draft.md` in the app repo, which is not legal advice.
