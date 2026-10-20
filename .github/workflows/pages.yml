@@ -25,8 +25,8 @@ jobs:
       # Publish only the site, not the design notes.
       - name: Refuse to publish unfinished placeholders
         run: |
-          if grep -rn "OWNER-PLACEHOLDER" index.html privacy.html thanks.html; then
-            echo "Placeholders still in the page: finish them first (search for OWNER-PLACEHOLDER)."; exit 1
+          if grep -rnE "OWNER-PLACEHOLDER|\[date\]|\[backend domain\]|\[n\] days|\[your " index.html privacy.html thanks.html; then
+            echo "Placeholders still in the pages: finish them first."; exit 1
           fi
       - name: Collect the site files
         run: |

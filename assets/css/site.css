@@ -73,6 +73,7 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 88px;
   scroll-behavior: smooth;
 }
 
@@ -1183,4 +1184,73 @@ figure {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--s6);
   }
+}
+
+/* Sign-up form: stay hidden when hidden, clearer field borders and placeholders */
+
+.join-form[hidden] {
+  display: none;
+}
+
+:root {
+  --field-border: #7d7566;
+  --placeholder: #5b656d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --field-border: #8a9490;
+    --placeholder: #a9b2ad;
+  }
+}
+
+.field input,
+.field textarea,
+.field select {
+  border-color: var(--field-border);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--placeholder);
+}
+
+/* Room for the sticky bar so it never covers the end of the page */
+@media (max-width: 760px) {
+  body {
+    padding-bottom: 80px;
+  }
+
+  /* Phone first screen: shorter photo, no tiny inset, so the button is in view */
+  .hero {
+    padding-top: var(--s5);
+  }
+
+  .hero-photo-img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .device.inset {
+    display: none;
+  }
+
+  .hero-visual {
+    margin-bottom: 0;
+  }
+
+  .hero .wrap {
+    gap: var(--s5);
+  }
+}
+
+.hint {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin: 0;
+}
+
+.maker .footnote {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin-top: var(--s4);
 }

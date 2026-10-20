@@ -119,8 +119,10 @@
         <div>
           <span class="eyebrow">Who made this</span>
           <h2 id="maker-title">Hello, I'm Paul</h2>
-          <p>I sail from Hythe Sailing Club. I've done my VHF and marine diesel courses and I'm partway through Day Skipper theory. Planning a passage is one of the parts I enjoy most, so I built a tool for my own checks: the big ships, the tide over the shallow spots and the harbour notices, in one place.</p>
-          <p>I'm sharing it with other Solent sailors to test. It's an aid, not a navigator, and doesn't replace your chart or your lookout. Tell me what's wrong or missing: <a href="mailto:hello@solentcompanion.com">hello@solentcompanion.com</a>.</p>
+          <p>I sail on the Solent, and planning a passage is one of the parts I enjoy most. I built this for my own checks: the big ships, the tide over the shallow spots and the harbour notices, in one place.</p>
+          <p>Please don't take my word for any of it. The tide gate screen shows its working, and the <a href="#faq">questions below</a> say where each kind of data comes from. Check the sums against your own almanac and chart. If something is wrong, tell me: <a href="mailto:hello@solentcompanion.com">hello@solentcompanion.com</a>. I'll fix it, or explain why it's right.</p>
+          <p>It's an aid, not a navigator, and doesn't replace your chart or your lookout. <a href="#join">Help test it</a></p>
+          <p class="footnote">About me: I've done VHF and marine diesel courses and I'm partway through Day Skipper theory.</p>
         </div>
       </div>
     </section>
@@ -249,23 +251,24 @@
     <section id="join" class="band" aria-labelledby="join-title">
       <div class="wrap join">
         <div>
-          <span class="eyebrow">Crew wanted</span>
-          <h2 id="join-title">Help us test it on the water</h2>
-          <p class="status" id="test-status"><span class="dot" aria-hidden="true"></span> Places open</p>
-          <p>Google runs a two-week test before an app goes public, so we need about 20 Solent sailors with an Android phone to keep it installed for 14 days and tell us what's wrong. Owners, new skippers and charterers all welcome. The sooner the test runs, the sooner everyone can have it.</p>
+          <span class="eyebrow">The closed test</span>
+          <h2 id="join-title">Help test it on the water</h2>
+          <p class="status" id="test-status"><span class="dot" aria-hidden="true"></span> Looking for about 20 testers</p>
+          <p>Google runs a closed test before an app goes public. We need about 20 Solent sailors with an Android phone to keep it installed for 14 days and tell us what's wrong. Owners, new skippers and charterers all welcome.</p>
           <ol class="steps">
             <li>Tell us the Google email on your phone.</li>
-            <li>We send you a link to install it from Google Play.</li>
+            <li>When the test opens, we email you a Google Play install link. That may be days or weeks away.</li>
             <li>Use it on a few trips over two weeks, then tell us what helped and what got in the way.</li>
           </ol>
           <details class="explainer">
-            <summary>What does "Google test" mean for me?</summary>
-            <div><p>Google asks new apps to be tried by a small group before release. You give us the email of the Google account on your phone, we add it to the test list, and Google Play then shows you an install link. It installs like any other app and updates itself. It's free, and you can leave at any time.</p></div>
+            <summary>What is a Google Play closed test?</summary>
+            <div><p>Google asks new apps to be tried by a small group before release. You give us the email of the Google account on your phone and we add it to the test list. When the test opens, Google Play shows you an install link. It installs like any other app and updates itself. It's free, and you can leave at any time.</p></div>
           </details>
-          <form class="join-form" id="join-form" action="https://solent-join.randomdoodle-pm.workers.dev/join" method="post">
+          <form class="join-form" id="join-form" novalidate action="https://solent-join.randomdoodle-pm.workers.dev/join" method="post">
             <div class="field">
               <label for="f-email">Google account email on your phone <span class="req">(required)</span></label>
-              <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" required maxlength="200">
+              <p class="hint" id="f-email-hint">The address you sign in to Google Play with. It doesn't have to end in gmail.com.</p>
+              <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" required maxlength="200" aria-describedby="f-email-hint f-email-error">
               <p class="field-error" id="f-email-error" role="alert" hidden></p>
             </div>
             <div class="field">
@@ -313,11 +316,11 @@
               <input id="f-company" name="company" type="text" tabindex="-1" autocomplete="off">
             </div>
             <div class="actions">
-              <button class="button" type="submit" id="join-submit">Count me in</button>
+              <button class="button" type="submit" id="join-submit">Help test it</button>
             </div>
-            <p class="form-status" id="join-status" role="status" tabindex="-1" hidden></p>
           </form>
-          <p class="fine">Prefer email? Write to <a href="mailto:hello@solentcompanion.com">hello@solentcompanion.com</a>. We only use your details to add you to the test and to ask for feedback. <a href="privacy.html#testers">How we handle your details</a>.</p>
+          <p class="form-status" id="join-status" role="status" tabindex="-1" hidden></p>
+          <p class="fine">Prefer email? Write to <a href="mailto:hello@solentcompanion.com">hello@solentcompanion.com</a>. We only use your details to add you to the test list and to ask for feedback. <a href="privacy.html#testers">How we handle your details</a>.</p>
         </div>
         <div class="card">
           <h3>What you'll need</h3>
@@ -359,6 +362,14 @@
           <details>
             <summary>Where does the data come from?</summary>
             <div><p>Ship positions broadcast by the ships themselves (AIS), tide predictions from the UK Hydrographic Office, seamarks from OpenSeaMap, and notices from the Solent's harbour authorities. Tide gate clearance uses the charted depth you take from your own chart.</p></div>
+          </details>
+          <details>
+            <summary>Can I trust the tide figures?</summary>
+            <div><p>Treat them as predictions, not promises. They come from UK Hydrographic Office tide predictions, and weather and pressure can shift the real height. The tide gate screen shows its working, so you can check the sum against your almanac. If it ever disagrees, tell me.</p></div>
+          </details>
+          <details>
+            <summary>What happens to my email after the test?</summary>
+            <div><p>We use it to add you to the closed test and to ask for feedback, nothing else. We don't add you to a mailing list or share it. We delete your details when the test ends, or sooner if you ask: write to <a href="mailto:hello@solentcompanion.com">hello@solentcompanion.com</a>.</p></div>
           </details>
           <details>
             <summary>What does it do with my location?</summary>
